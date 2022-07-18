@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flight Booking Page</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="module" src="flightbooking.js" defer></script>
+  </head>
+  <body>
+    <form class="bbform" id="passngerForm1" name="passngerForm">
+      <div class="rbtn">
+        <input type="radio" class="bttn" name="tripcheck" id="oneway" onclick="document.getElementById('returnDate').style.display='none'"/><span
+          >One way</span
+        >
+        <input
+          type="radio"
+          class="bttn"
+          name="tripcheck"
+          checked="checked"
+          id="round"
+          onclick="document.getElementById('returnDate').style.display='inline-block'"
+        /><span>Round Trip</span>
+      </div>
+      <div>
+        <div class="booking-details">
+          <label for="fromcity">From</label>
+          <input
+            type="text"
+            class="fc"
+            name="fromcity"
+            id="cityfrom"
+            placeholder="city or Airport"
+            required
+          />
+          <label for="tocity">To</label>
+          <input
+            type="text"
+            class="fc"
+            name="tocity"
+            id="cityto"
+            placeholder="city or Airport"
+            required
+          />
+        </div>
+        <div class="input-details">
+          <label for="departdate">Departing Date</label>
+          <input
+            type="date"
+            class="fc select-date"
+            placeholder="Departing date"
+            name="departdate"
+            id="depart"
+            required
+          />
+        </div>
+        <div class="input-details" id="returnDate">
+          <label for="returndate">Returning Date</label>
+          <input
+            type="date"
+            name="returndate"
+            id="return"
+            class="fc select-date"
+            placeholder="Returning date"
+          />
+        </div>
+        <br />
+        <br />
+        <div class="passenger" >
+          <label for="">Passenger 1</label>
+          <br />
+        
+         <div class="passenger1">
+            <label for="fname1">First Name</label>
+            <input
+              type="text"
+              name="fname1"
+              id="fname1"
+              placeholder="First Name"
+              required
+            />
+            <br />
+            <label for="lname1">Last Name</label>
+            <input type="text"  name="lname1" id="lname1" placeholder="Last Name" required />
+         </div>
+
+          <label for="age1">Age</label>
+          <input type="number" name="age1" id="age11" min="0" max="120"/>
+          <br />
+          
+          <div class="rbtn">
+             <input type="radio" class="bttn" name="gender1" id="gendercheckm1" /><span
+              >Male</span>
+             <input type="radio" class="bttn" name="gender1" id="gendercheckf1" /><span
+              >Female</span >
+          </div>
+          <br />
+          <label for="email1">Email</label>
+          <input
+            type="email"
+            name="email1"
+            id="pemail1"
+            placeholder="john@example.com"
+            required
+          />
+          <label for="Mobile">Mobile No </label>
+          <input
+            type="number"
+            name="mobile1"
+            id="pmobile1"
+            placeholder='eg 04xxxxxxxx'
+            required
+          />
+
+          <div class="passenger">
+            <label for="">Passenger 2</label>
+            <br />
+        
+            <div class="passenger2">
+              <label for="fname2">First Name</label>
+              <input
+                type="text"
+                name="fname2"
+                id="fname2"
+                placeholder="First Name"
+                required
+              />
+              <br />
+              <label for="lname2">Last Name</label>
+              <input type="text"  name="lname2" id="lname2" placeholder="Last Name" required />
+            </div>
+            <label for="age2">Age</label>
+            <input type="number" name="age2" id="age12" min="0" max ="120"/>
+            <br />
+           <br>
+            <div class="rbtn">
+              <input type="radio" class="bttn" name="gender2" id="gendercheckm2" /><span
+                > Male</span>
+              <input type="radio" class="bttn" name="gender2" id="gendercheckf2" /><span
+                >Female</span>
+            </div>
+            <br>
+            <label for="email2">Email</label>
+            <input
+              type="email"
+              name="email2"
+              id="pemail2"
+              placeholder="john@example.com"
+              required
+            />
+            <label for="mobile2">Mobile No </label>
+            <input
+              type="number"
+              name="mobile2"
+              id="pmobile2"
+              placeholder='eg 04xxxxxxxx'
+              required
+            />
+            <br />
+            <br />
+           <address>
+            
+            <label>Address:</label>
+            <br>
+            <div class="form-group address">
+                <input type="street" 
+                       class="form-control" 
+                       id="autocomplete" 
+                       placeholder="Street"
+                       required>
+                
+                <input type="city" 
+                       class="form-control" 
+                       id="inputCity" 
+                       placeholder="City"
+                       required>
+                
+                <input type="state" 
+                       class="form-control" 
+                       id="inputState" 
+                       placeholder="State"
+                       required>
+                
+                <input type="zip" 
+                       class="form-control" 
+                       id="inputZip" 
+                       placeholder="Zip"
+                       required>
+                
+                <input type="country" 
+                       class="form-control" 
+                       id="inputCountry" 
+                       placeholder="Country"
+                       required>
+              </div>
+            </address>
+             
+        <br />
+        <div class="input-details">
+           
+          <button
+            class="bttn bttn-primary Flight"
+            type="submit"
+            name="testSub"
+            id="formsubmit"
+          >Submit
+          </button>
+        </div>
+      </div>
+    </form>
+  </body>
+</html>

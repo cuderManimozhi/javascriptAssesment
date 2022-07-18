@@ -1,0 +1,68 @@
+body {
+    /* background-color: brown; */
+    /* background-image:linear-gradient(rbga(0,0,0,0.5),rbga(0,0,0,0.5),url("images/backgroundimage.jpg")); */
+    background-image: url(images/backgroundimage.jpg);
+    background-position: centre;
+    background-size: cover;
+}
+.bbform{
+    max-width: auto;
+    border: 1px solid #ced4da;
+    margin: 10% auto 0;
+    text-align: center;
+}
+.fc{
+    margin: 20px 10px 20px 0;
+    box-shadow: none;
+}
+.rbtn .bttn::after
+{
+content: '';
+height: 15px;
+width: 15px;
+top: -2px;
+left: -1px;
+background-color: white;
+position:relative;
+display:inline-block;
+border: 3px solid rgb(21, 2, 2);
+visibility: visible;
+border-radius: 50%;
+}
+.rbtn .bttn:checked::after
+{
+    content: '';
+    background-color: black;
+    transition: 0.5s;
+}
+.rbtn span{
+    color: rgb(45, 5, 5);
+     margin-right: 5px;
+     font-size: 12px;
+}
+.booking-details{
+    padding: 0 20px 20px;
+}
+.booking-details label{
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 12px;
+    color: rgb(34, 6, 6)  
+}
+input::placeholder{
+    color: #f7b1b1 !important;
+}
+.input-details {
+    width: 150px;
+    display: inline;
+}
+.passenger1  .passenger2{
+    width: 150px;
+    display: flexbox;
+}
+
+address{
+    font: i;
+    display:block;
+     
+}
