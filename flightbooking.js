@@ -4,15 +4,34 @@ var placeSearch, autocomplete;
 
 const retDate = document.getElementById("return");
 const depDate = document.getElementById("depart");
+const fc = document.getElementById("cityfrom");
+const tc = document.getElementById("cityto");
+
 retDate.addEventListener("change", validateRetDate);
 depDate.addEventListener("change", validateDepDate);
+tc.addEventListener("change", validatecity);
+
+ function validatecity(event) {
+  const tocity = event.target.value;
+  if ( tocity===fc.value || !fc.value){
+    alert("Departure city and Destination city cannot be same");
+    tc.value='';
+    return false;
+  }
+ }
 
 function validateDepDate(event) {
   event.preventDefault();
   const departeDate = event.target.value;
   console.log("DEPART:" + departeDate);
   const dt = new Date();
-  const today = dt.getFullYear()+"-"+'0'+(dt.getMonth()+1)+"-"+dt.getDate();
+  let tday = (dt.getDate()+1).toString();
+  tday.length<2 ? tday = '0'+ tday: tday;
+  let tmonth = (dt.getMonth()+1).toString();
+  console.log("Lenght:"+tmonth.length)
+  tmonth.length<2 ? tmonth = '0'+tmonth: tmonth;
+  const tyr = dt.getFullYear();
+  const today = tyr+'-'+tmonth+'-'+tday
   console.log("TODAY:" + today);
   if (departeDate < today) {
     depDate.value=''
@@ -23,8 +42,9 @@ function validateDepDate(event) {
 
 function validateRetDate(event) {
   event.preventDefault();
-  const retDate = event.target.value;
-  if (retDate < depDate.value) {
+  const returnDate = event.target.value;
+  console.log("DEP:"+depDate.value)
+  if (returnDate < depDate.value || !depDate.value ) {
     retDate.value=''
     alert("Return date must be same as or higher than Departure date");
     return false;
