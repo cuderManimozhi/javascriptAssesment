@@ -25,7 +25,7 @@ function validateDepDate(event) {
   const departeDate = event.target.value;
   console.log("DEPART:" + departeDate);
   const dt = new Date();
-  let tday = (dt.getDate()+1).toString();
+  let tday = (dt.getDate()).toString();
   tday.length<2 ? tday = '0'+ tday: tday;
   let tmonth = (dt.getMonth()+1).toString();
   console.log("Lenght:"+tmonth.length)
